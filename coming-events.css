@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("Background image.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #007acc;
+  color: #fff;
+  border-radius: 4px;
+  z-index: 1100;
+}
+
+.top-bar {
+  position: absolute;
+  top: 60px;
+  left: 61px;
+  height: 50px;
+  width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  background-color: #007acc;
+  border-radius: 4px;
+  transition: width 0.3s ease, padding 0.3s ease;
+  z-index: 1000;
+}
+
+#menuToggle:checked + .toggle-btn + .top-bar {
+  width: 650px;
+  padding: 0 10px;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  #menuToggle:checked + .toggle-btn + .top-bar {
+    width: calc(100% - 20px);
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .top-bar a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .top-bar{
+    height: auto;
+  }
+}
+header {
+  position: relative;
+  padding: 20px;
+}
+
+.logo {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 60px;
+  height: 50px;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.events-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calendar {
+  border-collapse: collapse; /*creates single borders for the table*/
+}
+
+.calendar caption {
+  font-weight: bold; /*makes caption of table in bold*/
+  font-size: 18px;
+  margin-bottom: 8px;
+  text-align: left; /*Aligns caption of table to left of it*/
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #bbb; /*gives table a solid border at 1px with colour*/
+  width: 120px;
+  height: 58px;
+  text-align: center;
+  vertical-align: top; /*aligns text to the top of the table section*/
+  padding: 4px;
+  font-size: 13px;
+}
+
+.calendar .event {
+  background-color: #d0eaff;
+  color: #004080; /*gives text blue font if under the correct class*/
+  font-size: 11px;
+}
+
+.calendar .special {
+  background-color: #ffd9d9;
+  color: #800000;
+  font-size: 11px;
+}
+
+.Image1 img {
+  width: 900;
+  height: auto;
+}
+
+.Details {
+  max-width: 600px;
+  font-size: 18px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 400px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+  width: fit-content;   
+  margin: 0 auto;       
+}
+
+.Form {
+  width: 450px;
+  max-width: 100%;
+}
+
+.Contact-details {
+  width: 350px;
+  max-width: 100%;
+  font-size: larger;
+}
+

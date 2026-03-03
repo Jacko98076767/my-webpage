@@ -1,0 +1,153 @@
+body { /*This creates the css body area*/
+  margin: 0; /*Allows me to set the margin to what i want, in this case 0*/
+  padding: 20px; /*Sets the padding*/
+  font-family: Arial, sans-serif; /*Sets the fonts i want to use in this page*/
+  background-image: url("Background image.png"); /*Links my image to be the background of the page*/
+  background-size: cover; /*Sets the background to cover the whole of the page*/
+  background-repeat: no-repeat; /*This means that the background image will not be repeated if the page is very large*/
+  background-position: center; /*Sets the position of the background to be centred*/
+  background-attachment: fixed; /*Sets the position of the background to be fixed throughout the page*/
+} /*Closes the area of the css*/
+
+#menuToggle {
+  display: none; /*hides element from page*/
+}
+
+.toggle-btn { 
+  position: absolute; /*Sets the position of the section to be absolute*/
+  top: 60px; /*Positions the button 60 px down from the top*/
+  left: 10px; /*Moves the button 10px from the right*/
+  width: 50px; /*Sets the width of the button to 50px*/
+  height: 50px; /*Sets the height of the button to 50px*/
+  font-size: 24px;/*sets the size of the lines on the button*/
+  line-height: 50px; /*spaces each line of text*/
+  text-align: center; /*alligns the lines in the centre of the button*/
+  cursor: pointer; /*changes the icon of the cursor*/
+  background-color: #007acc; /*sets the background colour to blue*/
+  color: white; /*Sets the colour of the lines on the button*/
+  border-radius: 4px; /*makes the button have a curved effect*/
+  z-index: 1100; /*sets the stacking order*/
+}
+
+.top-bar {
+  position: absolute;
+  top: 60px;
+  left: 61px;
+  height: 50px;
+  width: 0;
+  background-color: #007acc;
+  display: flex; /*Aranges items in a row rather than column*/
+  align-items: center;
+  gap: 10px; /*sets the gap between navigation links*/
+  overflow: hidden; /*hides everything outside the boundries to stop overflow*/
+  transition: width 0.3s ease, padding 0.3s ease; /*animates width and padding for .3 s*/
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+#menuToggle:checked + .toggle-btn + .top-bar {
+  padding-left: 10px; /*sets the padding from the left of the page*/
+  padding-right: 10px; /*sets the padding on the right of the page*/
+  width: 650px
+}
+
+.top-bar a {
+  color: white; /*sets text on the bar to white*/
+  text-decoration: none; /*removes underlines on links to other pages*/
+  font-weight: bold; /*sets the text to bold font*/
+  white-space: nowrap; /*stops names from being put on 2 lines*/
+  padding-left: 23px;  /*moves the text away from left of page*/
+}
+
+.top-bar a:hover {
+  background-color: #005fa3;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  #menuToggle:checked + .toggle-btn + .top-bar {
+    width: calc(100% - 20px);
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .top-bar a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .top-bar{
+    height: auto;
+  }
+}
+header {
+  position: relative; /*keps text as normal*/
+  padding: 20px;
+}
+
+.logo {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 60px;
+  height: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.p1 {
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: larger; /*sets the size of the font to larger*/
+}
+
+.wrapper1 {
+  display: flex;
+  flex-wrap: wrap; /*wraps text around areas*/
+  justify-content: space-between; /*creates equal space between items*/
+  margin-top: 10px; /*sets the margin from the top of the page*/
+  gap: 20px;
+}
+
+.Facts {
+  flex: 1 1 250px; /*controls size of the div class Facts*/
+  font-size: larger;
+}
+
+.Images {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.Info {
+  flex: 1 1 300px;
+  margin-left: 0px; /*sets the margin from the left of the page*/
+}
+
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /*aligns items to the start of the div*/
+  gap: 400px;
+  padding: 50px 20px;
+  flex-wrap: wrap; /*moves item down a row if it dosent fit the page*/
+}
+
+.Form {
+  width: 450px;
+  max-width: 100%; /*sets the max width of the section on the page*/
+}
+
+.Contact-details {
+  width: 350px;
+  max-width: 100%;
+  font-size: larger;
+}
+
+
